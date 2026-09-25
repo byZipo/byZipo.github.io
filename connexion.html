@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connexion – Colibri</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+    .done { max-width: 460px; text-align: center; background: var(--surface); border: 1px solid var(--line);
+            border-radius: 16px; padding: 32px 28px; }
+    .done img { width: 88px; height: 88px; }
+    .done h1 { font-size: 26px; margin: 14px 0 8px; }
+    .done p { color: var(--soft); margin: 0; }
+  </style>
+</head>
+<body>
+  <!-- Where Colibri sends the browser once Google has answered, so the address bar no longer
+       shows the one-time code. The fragment says how it went. -->
+  <div class="done">
+    <img src="logo.png" alt="">
+    <h1 id="title">Connexion réussie</h1>
+    <p id="said">Tu peux fermer cet onglet et revenir à Colibri, qui termine l'ajout du compte.</p>
+  </div>
+  <script>
+    if (location.hash === '#refus') {
+      document.getElementById('title').textContent = 'Connexion refusée';
+      document.getElementById('said').textContent =
+        "Aucun accès n'a été accordé. Tu peux fermer cet onglet et revenir à Colibri pour recommencer.";
+    }
+  </script>
+</body>
+</html>
