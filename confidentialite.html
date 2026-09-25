@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confidentialité – Colibri</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="home" href="./"><img src="logo.png" alt="">Colibri</a>
+    <nav>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="conditions.html">Conditions d'utilisation</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Politique de confidentialité</h1>
+    <p class="updated">Dernière mise à jour : 25 septembre 2026</p>
+
+    <p>
+      Colibri est une application de bureau pour Windows, éditée par Thibault Delavelle. Cette
+      page dit quelles données Colibri lit, où il les garde, à qui il les envoie, et comment les
+      effacer. En résumé : <strong>vos données restent sur votre ordinateur et chez le fournisseur
+      de votre boîte. L'éditeur de Colibri n'en reçoit aucune.</strong>
+    </p>
+
+    <h2>Ce que Colibri lit</h2>
+    <p>
+      Pour les comptes que vous y ajoutez, et seulement pour vous les montrer et vous laisser les
+      gérer, Colibri accède :
+    </p>
+    <ul>
+      <li>à votre courrier : messages, dossiers ou libellés, pièces jointes, brouillons, et à
+        l'envoi de messages en votre nom quand vous le demandez ;</li>
+      <li>à votre agenda : événements, invitations et vos réponses ;</li>
+      <li>à vos contacts ;</li>
+      <li>aux réglages de votre boîte qui s'affichent dans Colibri : réponse automatique
+        d'absence, règles de tri ;</li>
+      <li>à votre adresse e-mail, pour savoir à quel compte vous vous êtes connecté.</li>
+    </ul>
+
+    <h2>Où ces données vont</h2>
+    <p>
+      Colibri communique directement avec les serveurs du fournisseur de chaque compte : Google,
+      Microsoft, votre hébergeur Exchange ou IMAP. Il n'existe aucun serveur de Colibri : aucun
+      message, aucun contact, aucun événement, aucun identifiant n'est envoyé à l'éditeur ni à
+      quiconque d'autre. Colibri ne contient ni publicité, ni mesure d'audience, ni rapport
+      d'utilisation.
+    </p>
+    <p>Deux exceptions, que vous seul déclenchez :</p>
+    <ul>
+      <li><strong>L'assistant IA</strong>, si vous le configurez. Quand vous lui demandez de trier,
+        relire ou résumer, Colibri envoie le contenu des messages concernés au service Azure
+        OpenAI que vous avez vous-même renseigné, avec votre propre clé. Rien n'est envoyé si vous
+        ne le configurez pas, ni sans une action de votre part.</li>
+      <li><strong>Le serveur pour assistant (MCP)</strong>, livré avec Colibri. Si vous le déclarez
+        dans un agent IA installé sur votre ordinateur, cet agent peut lire votre boîte et y écrire
+        un brouillon quand vous le lui demandez. Il ne peut ni envoyer, ni supprimer, ni déplacer
+        de message. Ce que l'agent fait ensuite de ces données dépend de son propre éditeur.</li>
+    </ul>
+    <p>
+      Les images distantes contenues dans un message ne sont affichées que si vous l'autorisez,
+      car les charger prévient l'expéditeur que le message a été ouvert.
+    </p>
+
+    <h2>Ce que Colibri garde sur votre ordinateur</h2>
+    <ul>
+      <li>Vos mots de passe et jetons de connexion, chiffrés par Windows (DPAPI) et lisibles
+        uniquement par votre session Windows, sur cet ordinateur ;</li>
+      <li>la liste de vos comptes et les serveurs à joindre ;</li>
+      <li>vos réglages : apparence, signatures, préférences d'affichage ;</li>
+      <li>un carnet des adresses avec lesquelles vous avez échangé, pour la saisie automatique
+        des destinataires ;</li>
+      <li>les pièces jointes que vous ouvrez, le temps de les afficher, et le cache du composant
+        d'affichage de Windows (WebView2).</li>
+    </ul>
+    <p>
+      Tout se trouve dans le dossier <code>%LOCALAPPDATA%\Colibri</code> de votre session. Vos
+      messages eux-mêmes restent chez votre fournisseur : Colibri ne copie pas votre boîte.
+    </p>
+
+    <h2>Effacer vos données</h2>
+    <ul>
+      <li>La désinstallation de Colibri supprime toujours les mots de passe, jetons de connexion et
+        clés enregistrés, et propose de supprimer le reste du dossier <code>%LOCALAPPDATA%\Colibri</code>.</li>
+      <li>Vous pouvez aussi retirer l'accès de Colibri à tout moment chez le fournisseur : pour
+        Google, sur <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> ;
+        pour Microsoft, sur <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a>
+        (compte personnel) ou <a href="https://myapps.microsoft.com">myapps.microsoft.com</a>
+        (compte professionnel).</li>
+      <li>Rien n'étant conservé ailleurs que sur votre ordinateur, il n'y a rien d'autre à effacer.</li>
+    </ul>
+
+    <h2>Données Google</h2>
+    <p>
+      L'utilisation et le transfert à toute autre application des informations que Colibri reçoit
+      des API Google respectent le
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Règlement sur les
+      données utilisateur dans les services d'API Google</a>, y compris ses exigences d'usage
+      limité. Colibri n'utilise vos données Google que pour vous afficher et vous laisser gérer
+      votre courrier, votre agenda et vos contacts ; il ne les vend pas, ne s'en sert pas pour de
+      la publicité, ne les utilise pas pour entraîner un modèle d'IA, et personne ne les lit.
+    </p>
+    <p lang="en">
+      Colibri's use and transfer to any other app of information received from Google APIs will
+      adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+      API Services User Data Policy</a>, including the Limited Use requirements.
+    </p>
+
+    <h2>Données Microsoft</h2>
+    <p>
+      Pour un compte Microsoft, Colibri se connecte par la plateforme d'identité de Microsoft avec
+      les autorisations que vous accordez à la connexion, et n'utilise ces données que dans les
+      conditions décrites sur cette page.
+    </p>
+
+    <h2>Sécurité</h2>
+    <p>
+      Les échanges avec les serveurs sont chiffrés (TLS) ; Colibri refuse une connexion IMAP ou
+      SMTP non chiffrée. Les secrets ne sont jamais écrits en clair sur le disque.
+    </p>
+
+    <h2>Enfants</h2>
+    <p>Colibri ne s'adresse pas aux enfants de moins de 15 ans et ne collecte aucune donnée à leur sujet.</p>
+
+    <h2>Changements et contact</h2>
+    <p>
+      Si cette politique change, la nouvelle version sera publiée ici avec sa date. Pour toute
+      question, ou pour exercer vos droits : <a href="mailto:hello.colibri.app@gmail.com">hello.colibri.app@gmail.com</a>.
+    </p>
+  </main>
+
+  <footer>
+    Colibri, par Thibault Delavelle · <a href="./">Accueil</a> · <a href="conditions.html">Conditions d'utilisation</a>
+  </footer>
+</body>
+</html>

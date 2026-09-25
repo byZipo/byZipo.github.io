@@ -1,0 +1,95 @@
+/* Colibri's own palette, the one the application wears. No web fonts: the pages load nothing
+   from anywhere else, as befits a privacy policy. */
+:root {
+  --ground: #f4f2fa;
+  --surface: #ffffff;
+  --ink: #251d38;
+  --soft: #5b5270;
+  --accent: #6935e0;
+  --accent-deep: #41178b;
+  --line: #e4def3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #120d20;
+    --surface: #1c1530;
+    --ink: #efebf9;
+    --soft: #b8b0cc;
+    --accent: #a57cf9;
+    --accent-deep: #d5cbfb;
+    --line: #2e2547;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+header, main, footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+header img { width: 44px; height: 44px; }
+
+header a.home {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-deep); }
+
+main {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 8px 32px 28px;
+  margin-top: 8px;
+}
+
+h1 { font-size: 30px; line-height: 1.25; margin: 26px 0 6px; }
+h2 { font-size: 20px; margin: 30px 0 6px; }
+.lead { color: var(--soft); margin-top: 0; }
+.updated { color: var(--soft); font-size: 14px; }
+
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+
+.hero { text-align: center; padding: 24px 0 8px; }
+.hero img { width: 120px; height: 120px; }
+.hero h1 { font-size: 38px; margin-top: 12px; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 24px 0; }
+.facts div { border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+.facts strong { display: block; color: var(--accent-deep); }
+
+footer { color: var(--soft); font-size: 14px; padding-top: 18px; padding-bottom: 36px; }
+
+@media (max-width: 560px) {
+  main { padding: 4px 18px 22px; }
+  header { flex-wrap: wrap; }
+  nav { margin-left: 0; }
+}
